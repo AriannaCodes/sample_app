@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-base_title = "Ruby on Rails Tutorial Sample App" # temp fix - not sure why it isn't working
-
 describe "Static pages" do
+
+  let(:base_title) { "Ruby on Rails Tutorial Sample App" }
 
   describe "Home page" do
 
