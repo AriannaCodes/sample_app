@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe "Static pages" do
+base_title = "Ruby on Rails Tutorial Sample App" # temp fix - not sure why it isn't working
 
-  let(:base_title) { "Ruby on Rails Tutorial Sample App" }
+describe "Static pages" do
 
   describe "Home page" do
 
@@ -11,9 +11,10 @@ describe "Static pages" do
       page.should have_selector('h1', :text => 'Sample App')
     end
 
-    it "should have the title 'Home'" do
+    it "should have the base title" do
       visit '/static_pages/home'
-      page.should have_selector('title', :text => "#{base_title} | Home")
+      page.should have_selector('title',
+                        :text => "Ruby on Rails Tutorial Sample App")
     end
   end
 
